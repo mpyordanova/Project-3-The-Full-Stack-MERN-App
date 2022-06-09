@@ -1,16 +1,16 @@
 import React from 'react'
 
-const SearchBar = (props) => {
+const SearchBar = ({search, handleChange, handleSubmit}) => {
   return (
     <div className='search-box'>
-         <form onSubmit={props.handleSubmit}>
+         <form onSubmit={handleSubmit}>
           <label htmlFor="search">Search Book by:</label><br/>
-          <select id="type" name="type" onChange={props.handleChange} >
+          <select id="type" name="type" onChange={handleChange} >
             <option value="title" >Title</option>
             <option value="authors" >Author</option>
             <option value="category" >Category</option>
           </select>
-          <input type="text" id="search" name="search" onChange={props.handleChange} />
+          <input type="text" id="search" name="search" onChange={handleChange} />
            <input type="submit" />
            
         </form>

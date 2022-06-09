@@ -1,9 +1,13 @@
 import React from 'react'
-
-const Navbar = () => {
+import SearchBar from './SearchBar'
+const Navbar = ({search, handleChange, handleSubmit}) => {
   return (
-    <div>Navbar</div>
+    <div>Navbar
+       <SearchBar search={search} handleChange={handleChange} handleSubmit={handleSubmit}/>
+    </div>
+   
   )
 }
 
 export default Navbar
+// props.seach or
