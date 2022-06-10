@@ -1,3 +1,27 @@
+Project #3: The Full Stack MERN App
+Attendance
+We will not be having instruction on project days, but we do expect you to be in class to work on your project and most importantly get help from your instructional team.
+
+We will still have some instruction and other mandatory items during project week.
+
+Project Details
+
+ 
+🔴 Mandatory To Pass:
+MVP - Minimum Viable Product
+SEVEN Components
+Use an external API
+Use React Router
+Pass Props
+Have at least one FORM
+Anything I missed from last project!
+Must use either useContext, useReducer, or both at least once!
+You CAN add to your mid mod project. HOWEVER -- You must add more FUNCTIONALITY as well. Add another feature or two, possibly another API that works with it, or just more stuff with the API you used!
+
+Heroku link:
+
+https://project-3-the-full-stack.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

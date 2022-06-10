@@ -62,12 +62,53 @@ html {
 }
 
 :root{
-  --primary-color:rgb(160,82,45);
-  --secondary-color:rgb(210,180,140);
+  --primary-color:rgb(189, 108, 70);
+  --secondary-color:rgb(255, 228, 193);
 }
 body{
   background-color: var(--secondary-color);
   background-size: 100%;
   margin: 20px;
   border: 30px solid var(--primary-color);
+}
+.card{
+ display: flex;
+    /* background-color:rgb(175, 143, 100) ; */
+    background-color: rgb(189, 108, 70);
+    border-radius: 1rem;
+    /* border: 3px solid var(--primary-color); */
+    padding: 0.5rem;
+    margin:auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    /* box-shadow: 0 5px 5px rgba(212,185,150,.5); */
+    transition: .5s;
+    text-align: center;
+    position: relative;
+    width: 50rem;
+    border: 5px solid white;
+    
+}
+
+.grid{
+  columns: 1;
+  gap: 10;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.left{
+  text-align: center;
+  width: 40%;
+  
+  
+}
+.right{
+  text-align: center;
+  color: white;
+  width: 60%;
+
+}
+.navbar{
+  background-color: rgb(189, 108, 70);
 }

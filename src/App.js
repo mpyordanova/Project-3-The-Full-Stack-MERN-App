@@ -3,14 +3,29 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import axios from "axios"
+import { Routes, Route, useNavigate } from 'react-router-dom'
+import Favorites from './components/My_Library';
+import Books from './components/Books';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return [...state, action.book];
+      default:
+       throw new Error()
+  }
+}
 
 function App() {
 
   const [search, setSearch] = useState({ search: '' })
   const [books, setBooks] = useState([])
-// console.log(books)
+  const [favorites, dispatch] = useReducer(reducer,[]);
+  
+
+  // console.log(books)
   const handleSubmit = (event) => {
     event.preventDefault()
     // console.log(search)
@@ -30,16 +45,17 @@ function App() {
     <div className="App">
       <Header />
       <Navbar search={search} handleChange={handleChange} handleSubmit={handleSubmit} />
-      <Home books={books} />
+      {/* <Home books={books} dispatch={dispatch} /> */}
       <Footer />
+      
 
-
-      {/* <Routes>  
-        <Route path='/' element={<Home handleSubmit={handleSubmit} handleChange={handleChange} />} />
-        <Route path='/book' element={<Book apiResponse={apiResponse} />} />
-        <Route path='/title' element={<Book apiResponse={apiResponse} />} />
-        <Route path='/author' element={<Author apiResponse={apiResponse}/>} />
-       </Routes> */}
+       <Routes>  
+        
+         <Route path='/Favorites' element={<Favorites books={books} favorites={favorites}/>} />
+         <Route path='/' element={<Home books={books} dispatch={dispatch} handleSubmit={handleSubmit} handleChange={handleChange} />} />
+        {/* <Route path='/Books' element={<Book setSearch={setSearch} />} /> */}
+      {/* <Route path='/author' element={<Author apiResponse={apiResponse}/>} /> */}
+      </Routes> 
     </div>
   );
 }
