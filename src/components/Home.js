@@ -12,7 +12,6 @@ useEffect(() => {
 
   return (
     <div>
-    
       <section className='grid'>
         {books?.map((book) => { 
           const { kind, selfLink, volumeInfo, id, imageLinks, previewLink, infoLink } = book

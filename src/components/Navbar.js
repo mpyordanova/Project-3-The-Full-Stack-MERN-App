@@ -1,22 +1,19 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import SearchBar from './SearchBar'
-import MyLibrary from './My_Library'
 import { Link } from 'react-router-dom'
+import DropDown from './DropDown'
+ 
 
-
-const Navbar = ({ search, handleChange, handleSubmit }) => {
+const Navbar = ({ search, handleChange, handleSubmit, Dropdown }) => {
 
   return (
-    <div className='navbar'>Navbar
-      <li>
-        <Link to='/'>Home</Link>
-      </li>
-      <li>
-        <Link to='/Favorites'>My Library</Link>
-      </li>
-
+    <div className='navbar'>
+    {/* //   <div className='nav-list'>
+    //     <Link to='/'>Home</Link>
+    //     <Link to='/Favorites'>My Library</Link>
+    //   </div> */}
       <SearchBar search={search} handleChange={handleChange} handleSubmit={handleSubmit} />
-
+      <DropDown />
     </div>
 
   )

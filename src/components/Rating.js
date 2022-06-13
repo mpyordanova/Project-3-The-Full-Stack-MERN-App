@@ -1,26 +1,30 @@
-// import React from 'react';
-// import reactStars from 'react-rating-stars-component';
-// import {render} from 'react-dom';
-// import ReactStars from 'react-rating-stars-component';
-// import {MdStar} from 'react-icons/md '
-// const ratingChanged = (newRating) => {
-//     console.log(newRating);
-// };
+import React, {useState} from 'react';
 
-// // class Rating extends Components {
-// // render(){
-// //     <div>star
-// //         return<MdStar
-    
-     
-// //     count={5}
-// //     onChange={ratingChanged}
-// //     size={24}
-// //     activeColor="#ffd700"
-// //     />
-// //   document.getElementById()
-// //   </div>
-// // }
-// // }
+const Rating = ()=> {
+    const [rating, setRating]= useState(0);
+ 
+    return ( 
+    <div className='star-rating'>
+       <p>Rate my website</p>
+       {[...Array(5)].map((star, index)=>{
+        index +=1;
+        return(
+            <button type="star-button"
+            key={index}
+            className={index<=rating ? 'on': 'off'}
+            onClick ={()=>setRating(index)}
+            onDoubleClick={() => {
+                setRating(0);
+                }}
+            >
+            <span className='star'>&#9733;</span>
+            </button>
+        );
+       })}
+    </div>
+    );
+};
 
-// export default Rating;
+
+
+export default Rating;

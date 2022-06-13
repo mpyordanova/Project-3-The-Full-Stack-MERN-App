@@ -8,6 +8,8 @@ import axios from "axios"
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Favorites from './components/My_Library';
 import Books from './components/Books';
+import DropDown from './components/DropDown'
+import Article from './components/Article';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -23,9 +25,9 @@ function App() {
   const [search, setSearch] = useState({ search: '' })
   const [books, setBooks] = useState([])
   const [favorites, dispatch] = useReducer(reducer,[]);
+  const navigate = useNavigate()
   
-
-  // console.log(books)
+// console.log(books)
   const handleSubmit = (event) => {
     event.preventDefault()
     // console.log(search)
@@ -34,6 +36,7 @@ function App() {
       ${search.search}&key=${process.env.REACT_APP_API_KEY}&maxResults=20`)
       console.log(res.data.items);
       setBooks(res.data.items)
+      navigate('/books')
     }
     fetchBooks()
   }
@@ -45,17 +48,14 @@ function App() {
     <div className="App">
       <Header />
       <Navbar search={search} handleChange={handleChange} handleSubmit={handleSubmit} />
-      {/* <Home books={books} dispatch={dispatch} /> */}
-      <Footer />
+      {/* <Article/> */}
       
-
-       <Routes>  
-        
-         <Route path='/Favorites' element={<Favorites books={books} favorites={favorites}/>} />
-         <Route path='/' element={<Home books={books} dispatch={dispatch} handleSubmit={handleSubmit} handleChange={handleChange} />} />
-        {/* <Route path='/Books' element={<Book setSearch={setSearch} />} /> */}
-      {/* <Route path='/author' element={<Author apiResponse={apiResponse}/>} /> */}
+      <Routes>  
+        <Route path='/' element={<Article/>}/>       
+         <Route path='/Favorites' element={<Favorites books={books} favorites={favorites} />} />
+         <Route path='/Books' element={<Home books={books} dispatch={dispatch} handleSubmit={handleSubmit} handleChange={handleChange} />} />
       </Routes> 
+      <Footer />
     </div>
   );
 }

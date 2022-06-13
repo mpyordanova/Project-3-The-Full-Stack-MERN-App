@@ -1,8 +1,12 @@
 import React from 'react'
+import Rating from './Rating'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      <Rating/>
+    </div>
+
   )
 }
 
