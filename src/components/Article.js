@@ -2,8 +2,9 @@ import React from "react";
 const Article =()=>{
     return(
         <div className="article">
+            <p>"A mind needs books like a sword needs a whetstone, if it is to keep its edge."- George R.R. Martin, A Game of Throne</p>
             <h5>Benefits of reading books and how it can positively affect your life.</h5>
-            <img src="components/Book2.jpg" alt="book"/>
+            {/* <img src="components/Book2.jpg" alt="book"/> */}
 <p>Over 1,000 years later, people the world over are still engrossed by novels — even in an era where stories appear on handheld screens and disappear 24 hours later.
 
 What exactly do human beings get from reading books? Is it just a matter of pleasure, or are there benefits beyond enjoyment? The scientific answer is a resounding “yes.”

@@ -15,7 +15,7 @@ function Dropdown() {
     return(
       <div className='dropdown'>
         <div className='dropdown-menu' onMouseEnter={ShowDropdown} onMouseLeave={HideDropdown}>
-          <h2>Home</h2>
+          <h2>Menu</h2>
           {state?(<ul  onMouseEnter={ShowDropdown}>
           <Link className='dropdown-list' to='/'>Home</Link>
           <Link className='dropdown-list' to='/Favorites'>My Library</Link>
