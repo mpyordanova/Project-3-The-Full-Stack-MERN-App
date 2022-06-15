@@ -18,12 +18,12 @@ useEffect(() => {
           return (
             <article key={id}>
               <div className='card'>
-                <div className='left'>
+                <div className='left-top'>
                   <img src={volumeInfo.imageLinks?.thumbnail} alt={volumeInfo.title} className="block" />
                 </div>
-                <div className='right'>
+                <div className='right-bottom'>
                   <h2>{volumeInfo.title}</h2>
-                  <h2>{volumeInfo.authors?.[0]}</h2>
+                  <h3>{volumeInfo.authors?.[0]}</h3>
                   {/* <h3>{volumeInfo.averageRating}</h3> */}
                   <h3>{volumeInfo.categories}</h3>
                   <a href={volumeInfo.previewLink}><button>Preview</button></a>

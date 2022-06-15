@@ -2,7 +2,8 @@ import React from "react";
 const Article =()=>{
     return(
         <div className="article">
-            <p>"A mind needs books like a sword needs a whetstone, if it is to keep its edge."- George R.R. Martin, A Game of Throne</p>
+            <div className="quote">"A mind needs books like a sword needs a whetstone, if it is to keep its edge."- George R.R. Martin, A Game of Thrones.</div>
+            <div className="middle">
             <h5>Benefits of reading books and how it can positively affect your life.</h5>
             {/* <img src="components/Book2.jpg" alt="book"/> */}
 <p>Over 1,000 years later, people the world over are still engrossed by novels — even in an era where stories appear on handheld screens and disappear 24 hours later.
@@ -32,8 +33,8 @@ A 2019 poll conducted by Cengage showed that 69 percent of employers are looking
 The study found that 30 minutes of reading lowered blood pressure, heart rate, and feelings of psychological distress just as effectively as yoga and humor did.
 
 The authors concluded, “Since time constraints are one of the most frequently cited reasons for high stress levels reported by health science students, 30 minutes of one of these techniques can be easily incorporated into their schedule without diverting a large amount of time from their studies.”</p>
-        
-        
+        <div className="right-column"></div>
+        </div>
         </div>
 
     )
